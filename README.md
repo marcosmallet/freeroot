@@ -1,6 +1,6 @@
 Instruções:
 
-git clone https://github.com/tartagames/freeroot.git
+git clone https://github.com/marcosmallet/freeroot.git
 
 cd freeroot
 
