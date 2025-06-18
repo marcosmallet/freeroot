@@ -32,7 +32,7 @@ sleep 5
 
 # Extrai a URL do webhook gerado pelo Cloudflare
 URL=$(grep -o 'https://[^ ]*trycloudflare.com' tunnel.log)
-export WEBHOOK_URL=URL
+export WEBHOOK_URL=$URL
 
 # Inicia o n8n
 n8n > n8n.log 2>&1 &
