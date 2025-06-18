@@ -7,7 +7,7 @@ apt update
 apt install --yes sudo curl
 
 # Atualiza o arquivo /etc/hosts
-sudo sh -c 'echo -e "127.0.0.1\tlocalhost\n::1\tlocalhost" >> /etc/hosts'
+sudo sh -c 'echo "127.0.0.1\tlocalhost\n::1\tlocalhost" >> /etc/hosts'
 
 # Adiciona a chave GPG da Cloudflare
 sudo mkdir -p --mode=0755 /usr/share/keyrings
