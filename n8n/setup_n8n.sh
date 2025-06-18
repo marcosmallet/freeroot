@@ -31,7 +31,8 @@ TUNNEL_PID=$!
 sleep 5
 
 # Extrai a URL do webhook gerado pelo Cloudflare
-export WEBHOOK_URL=$(grep -o 'https://[^ ]*trycloudflare.com' tunnel.log)
+URL=$(grep -o 'https://[^ ]*trycloudflare.com' tunnel.log)
+export WEBHOOK_URL=URL
 
 # Inicia o n8n
 n8n > n8n.log 2>&1 &
@@ -39,7 +40,7 @@ N8N_PID=$!
 
 # Exibe informações úteis
 echo "Webhook URL:"
-echo "$WEBHOOK_URL"
+echo $URL
 echo
 echo "Processos em segundo plano:"
 echo "Cloudflared PID: $TUNNEL_PID"
