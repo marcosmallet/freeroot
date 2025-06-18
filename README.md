@@ -9,8 +9,10 @@ bash root.sh
 
 #dentro do freeroot
 
+cd ..
+
 cd n8n
 
 chmod +x setup_n8n.sh
 
-sudo ./setup_n8n.sh
+./setup_n8n.sh
