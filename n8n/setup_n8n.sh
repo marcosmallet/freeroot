@@ -28,10 +28,10 @@ sudo npm install -g n8n@latest
 # Inicia o túnel com Cloudflared
 cloudflared tunnel --url http://localhost:5678 > tunnel.log 2>&1 &
 TUNNEL_PID=$!
-sleep 5
+sleep 10
 
 # Extrai a URL do webhook gerado pelo Cloudflare
-URL=$(grep -o 'https://[^ ]*trycloudflare.com' tunnel.log)
+URL=$(grep -o 'https://[^ ]*trycloudflare.com' tunnel.log | head -n 1)
 export WEBHOOK_URL=$URL
 
 # Inicia o n8n
